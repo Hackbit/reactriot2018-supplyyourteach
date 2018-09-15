@@ -6,6 +6,8 @@ import {
 import { Paper, Grid } from '@material-ui/core';
 import Home from './containers/Home'
 import Login  from './containers/Login'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 import './App.css';
 
 const styles = theme => ({
@@ -25,8 +27,10 @@ const styles = theme => ({
 const App= () => (
   <Router>
     <div className="App">
+      <Header />
         <Route exact path='/' render={() => <Home />} />
         <Route path='/login' render={() => <Login />} />
+      <Footer />
     </div>
   </Router>
 );
