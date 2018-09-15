@@ -15,8 +15,14 @@ class Header extends Component {
               <AppBar position="absolute" color="default">
                 <Toolbar>
                   <Typography variant="title" color="inherit" noWrap>
-                    Supply Your Teach
+                    <h2>Supply Your Teach</h2>
                   </Typography>
+                  <Button>Teachers</Button>
+                  <Button>Parents</Button>
+                  <Button>Support</Button>
+                  <Button color="primary" variant="outlined">
+                   Login
+                  </Button>
                 </Toolbar>
               </AppBar>
           </div>
