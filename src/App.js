@@ -3,15 +3,30 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
+import { Paper, Grid } from '@material-ui/core';
 import Home from './containers/Home'
 import Login  from './containers/Login'
 import './App.css';
 
+const styles = theme => ({
+  root: {
+    overflow: 'hidden',
+    padding: `0 ${theme.spacing.unit * 3}px`,
+  },
+  wrapper: {
+    maxWidth: 400,
+  },
+  paper: {
+    margin: theme.spacing.unit,
+    padding: theme.spacing.unit * 2,
+  },
+});
+
 const App= () => (
   <Router>
     <div className="App">
-      <Route exact path='/' render={() => <Home />} />
-      <Route path='/login' render={() => <Login />} />
+        <Route exact path='/' render={() => <Home />} />
+        <Route path='/login' render={() => <Login />} />
     </div>
   </Router>
 );

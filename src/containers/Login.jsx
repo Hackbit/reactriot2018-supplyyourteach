@@ -1,71 +1,58 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import MenuItem from '@material-ui/core/MenuItem';
-import TextField from '@material-ui/core/TextField';
+import { Grid, Paper, Card, FormControl, TextField, Button } from '@material-ui/core';
 
-const styles = theme => ({
-    container: {
-      display: 'flex',
-      flexWrap: 'wrap',
-    },
-    textField: {
-      marginLeft: theme.spacing.unit,
-      marginRight: theme.spacing.unit,
-      width: 200,
-    },
-    menu: {
-      width: 200,
-    },
-  });
+class Login extends Component
+{
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            userName : '',
+            userPw : '',
+            userAuthenicated : false
+        };
+    }
 
-class Login extends Component {
-    
-  constructor(){
-    super();
-    this.state = {
-      formDisplayed : 0
-    };
-  }
+    authenicateUser = () => {
 
-    
+    }
+
     render(){
-
-      let { formDisplayed } = this.state;
-
-      let logInForm = () =>{
         return(
-          <form>
-            Email:<br />
-            <input type="text" name="email" value="" />
-            <br/>
-            Password:<br/>
-            <input type="text" name="password" value="" />
-            <br/><br/>
-            <input type="submit" value="Log In" />
-          </form> 
-        )
-    };
-    
-    let signUpForm = () => {
-        return(
-          <form>
-            First name:<br/>
-            <input type="text" name="firstname" value="" />
-            <br/>
-            Last name:<br/>
-            <input type="text" name="lastname" value="" />
-            <br/><br/>
-            <input type="submit" value="Sign Up" />
-          </form> 
-        )
-    };
-        return (
-            <div>
-               <h1>Login</h1>
-               { formDisplayed === 0 ? logInForm :signUpForm }
-            </div>
-        )
+            <Grid container  justify="center">
+                <Card>
+                    <Grid container >
+                        <Grid item xs={12} justify="center">
+                            <h1>SupplyYourTeach</h1>
+                        </Grid>
+                        <Grid item xs={12} >
+                            <TextField
+                                id='userName'
+                                label="User Name"
+                                margin='normal'
+                            />
+                        </Grid>
+                        <Grid item xs={12} >
+                            <TextField
+                                id='userPw'
+                                label='Password'
+                                margin='normal'
+                            />
+                        </Grid>
+                        <Grid item xs={12} >
+                            <Button 
+                                variant="contained" 
+                                color="primary" 
+                                onClick={this.authenicateUser}
+                            >
+                                Log In
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Card>
+            </Grid>
+    );
     }
 }
 
