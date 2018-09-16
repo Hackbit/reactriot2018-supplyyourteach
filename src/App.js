@@ -8,8 +8,8 @@ import Home from './containers/Home';
 import Login  from './containers/Login';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Teachers from './components/pages/Teachers/Teachers';
 import Parents from './containers/Parents';
-
 import './App.css';
 
 const styles = theme => ({
@@ -33,6 +33,7 @@ const App= () => (
         <Route exact path='/' render={() => <Home />} />
         <Route path='/login' render={() => <Login />} />
         <Route path='/parents' render={() => <Parents />} />
+        <Route path='/teachers' render={() => <Teachers />} />
       <Footer />
     </div>
   </Router>
