@@ -5,27 +5,31 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+
 
 class Header extends Component {
 
     render(){
         return (
-          <div>
-            <CssBaseline />
-              <AppBar position="absolute" color="default">
-                <Toolbar>
-                  <Typography variant="title" color="inherit" noWrap>
-                    <h2>Supply Your Teach</h2>
-                  </Typography>
-                  <Button>Teachers</Button>
-                  <Button>Parents</Button>
-                  <Button>Support</Button>
-                  <Button color="primary" variant="outlined">
-                   Login
-                  </Button>
-                </Toolbar>
-              </AppBar>
-          </div>
+          <React.Fragment>
+            <Grid container>
+              <CssBaseline />
+                <AppBar position="absolute" color="default">
+                  <Toolbar>
+                    <Typography variant="title" color="inherit" noWrap>
+                      <h2>Supply Your Teach</h2>
+                    </Typography>
+                    <Button>Teachers</Button>
+                    <Button>Parents</Button>
+                    <Button>Support</Button>
+                    <Button color="primary" variant="outlined">
+                     Login
+                    </Button>
+                  </Toolbar>
+                </AppBar>
+            </Grid>
+          </React.Fragment>
         )
     }
 }

@@ -8,6 +8,7 @@ import Home from './containers/Home'
 import Login  from './containers/Login'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import Teachers from './components/Teachers/Teachers'
 import './App.css';
 
 const styles = theme => ({
@@ -30,6 +31,7 @@ const App= () => (
       <Header />
         <Route exact path='/' render={() => <Home />} />
         <Route path='/login' render={() => <Login />} />
+        <Route path='/Teachers' render={() => <Teachers />} />
       <Footer />
     </div>
   </Router>
