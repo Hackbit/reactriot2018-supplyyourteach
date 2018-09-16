@@ -8,7 +8,7 @@ import Home from './containers/Home'
 import Login  from './containers/Login'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import Teachers from './components/Teachers/Teachers'
+import Teachers from './components/pages/Teachers/Teachers'
 import './App.css';
 
 const styles = theme => ({

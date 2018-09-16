@@ -38,7 +38,7 @@ class Teachers extends Component {
             <br></br>
             <br></br>
             <Typography variant="title" gutterBottom>
-              Welcome Teacher
+              Welcome Teacher 1
             </Typography>
 
             <FormControl >
