@@ -1,25 +1,20 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import {Link} from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import { Link } from 'react-router-dom';
+import { Button, Grid, AppBar, CssBaseline, Toolbar } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
 
 
 class Header extends Component {
 
     render(){
         return (
-         <React.Fragment>
           <Grid container>
+            <Grid item xs={12}>
             <CssBaseline />
               <AppBar position="absolute" color="default">
                 <Toolbar>
                   <Typography variant="title" color="inherit" noWrap>
-                    <h2>Supply Your Teach</h2>
+                    Supply Your Teach
                   </Typography>
                   <Button>
                     <Link to='/teachers'>Teachers</Link> 
@@ -36,7 +31,7 @@ class Header extends Component {
                 </Toolbar>
               </AppBar>
             </Grid>
-          </React.Fragment>
+          </Grid>
         )
     }
 }

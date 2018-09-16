@@ -3,7 +3,7 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
-import { Paper, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Home from './containers/Home';
 import Login  from './containers/Login';
 import Header from './components/Header/Header';
