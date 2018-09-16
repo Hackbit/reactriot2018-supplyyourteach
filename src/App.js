@@ -4,10 +4,12 @@ import {
   Route
 } from 'react-router-dom'
 import { Paper, Grid } from '@material-ui/core';
-import Home from './containers/Home'
-import Login  from './containers/Login'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+import Home from './containers/Home';
+import Login  from './containers/Login';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Parents from './containers/Parents';
+
 import './App.css';
 
 const styles = theme => ({
@@ -30,6 +32,7 @@ const App= () => (
       <Header />
         <Route exact path='/' render={() => <Home />} />
         <Route path='/login' render={() => <Login />} />
+        <Route path='/parents' render={() => <Parents />} />
       <Footer />
     </div>
   </Router>

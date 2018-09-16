@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import {Link} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -17,11 +18,17 @@ class Header extends Component {
                   <Typography variant="title" color="inherit" noWrap>
                     <h2>Supply Your Teach</h2>
                   </Typography>
-                  <Button>Teachers</Button>
-                  <Button>Parents</Button>
-                  <Button>Support</Button>
+                  <Button>
+                    <Link to='/teachers'>Teachers</Link> 
+                  </Button>
+                  <Button>
+                    <Link to='/parents'> Parents </Link>
+                  </Button>
+                  <Button>
+                    <Link to='/support'>Support</Link>
+                  </Button>
                   <Button color="primary" variant="outlined">
-                   Login
+                  <Link to='/login'>Login</Link>
                   </Button>
                 </Toolbar>
               </AppBar>
